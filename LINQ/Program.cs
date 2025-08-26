@@ -24,9 +24,9 @@ namespace LINQ
             //}
             #endregion
             #endregion
-            
 
-           
+
+
 
             #region [LINQ - Element Operators]
             #region Q1
@@ -120,7 +120,7 @@ namespace LINQ
 
 
             #endregion
-          
+
             #endregion
 
             #region [LINQ – Transformation Operators]
@@ -134,7 +134,7 @@ namespace LINQ
 
 
             #endregion
-           
+
             #region Q3
             //int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
             //int[] numbersB = { 1, 3, 5, 7, 8 };
@@ -161,6 +161,132 @@ namespace LINQ
             //}
             #endregion
             #endregion
+
+            #region Q1
+            //var result = ProductList.Select(P => P.Category).Distinct();
+            //foreach (var item in result) 
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
+
+            #region Q2
+
+            //var result = ProductList.Select(P => P.ProductName[0])
+            //            .Union(CustomerList.Select(C => C.CustomerName[0]));
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            #endregion
+
+            #region Q3
+
+            //var result = ProductList.Select(P => P.ProductName[0])
+            //            .Intersect(CustomerList.Select(C => C.CustomerName[0]));
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+            #endregion
+
+            #region Q4
+            //var result = ProductList.Select(P => P.ProductName[0])
+            //            .Except(CustomerList.Select(C => C.CustomerName[0]));
+            //foreach (var item in result)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+            #endregion
+
+            #region Q1
+            //var result = CustomerList.Where(P => P.City == "Washington").SelectMany(P => P.Orders).Take(3);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}  
+            #endregion
+
+            #region Q2
+            //var result = CustomerList.Where(P => P.City == "Washington").SelectMany(P => P.Orders).Skip(2);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+            #endregion
+
+            #region Q3
+
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var result = numbers.TakeWhile((P, I) => P > I);
+            //foreach (var i in result) 
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            #endregion
+
+            #region Q4
+            //int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+            //var result = numbers.SkipWhile(P => P % 3 != 0);
+            //foreach (var i in result)
+            //{
+            //    Console.WriteLine(i);
+            //} 
+            #endregion
+
+            #region Q1
+
+            //string[] words = File.ReadAllLines("dictionary_english.txt");
+            //var result = words.Any(W => W.Contains("ei"));
+            //Console.WriteLine(result); 
+            #endregion
+
+            #region Q2
+            //var result = ProductList.Where(P => P.UnitsInStock == 0).GroupBy(P => P.Category).ToList();
+
+            //foreach (var group in result)
+            //{
+            //    Console.WriteLine($"Category: {group.Key}");
+            //    foreach (var product in group)
+            //    {
+            //        Console.WriteLine($"    {product.ProductName} {product.UnitsInStock}");
+            //    }
+            //} 
+            #endregion
+
+            #region Q3
+
+            //var result = ProductList.GroupBy(p => p.Category)
+            //                                 .Where(g => g.All(p => p.UnitsInStock > 0));
+
+            //foreach (var group in result)
+            //{
+            //    Console.WriteLine($"Category: {group.Key}");
+            //    foreach (var product in group)
+            //    {
+            //        Console.WriteLine($"    {product.ProductName} {product.UnitsInStock}");
+            //    }
+            //}
+            #endregion
+
+            //string[] words = File.ReadAllLines("dictionary_english.txt");
+
+            //var groupedWords = words.GroupBy(word => word[0]);
+
+            //foreach (var group in groupedWords)
+            //{
+            //    Console.WriteLine($"Words that start with {group.Key}:");
+            //    foreach (var word in group)
+            //    {
+            //        Console.WriteLine(word);
+            //    }
+            //    Console.WriteLine();
+            //} 
+
 
         }
     }
