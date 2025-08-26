@@ -22,32 +22,11 @@ namespace LINQ
             //{
             //    Console.WriteLine(item);
             //}
-            //#endregion
             #endregion
-            #region Q3
-            //String[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-
-            //var words = from N in Arr
-            //                            where N.Length < Arr.ToList().IndexOf(N) // Compare length with its index (numeric value)
-            //                            select N;
-
-            //foreach (var word in words)
-            //{
-            //    Console.WriteLine(word);
-            //}
-
-            //Other way
-            //String[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-
-            //var words = Arr.Where((Num, Idx) => Num.Length < Idx);
-
-            //foreach (var word in words)
-            //{
-            //    Console.WriteLine(word);
-            //}
             #endregion
+            
 
-            #endregion]
+           
 
             #region [LINQ - Element Operators]
             #region Q1
@@ -141,18 +120,7 @@ namespace LINQ
 
 
             #endregion
-            #region Q7
-            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-
-            //var sortedArr = Arr.OrderBy(word => word.Length)
-            //               .ThenByDescending(word => word, StringComparer.OrdinalIgnoreCase);
-            #endregion
-            #region Q8
-            // string[] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-            //var result = Arr.Where(word => word.Length > 1 && word[1] == 'i')
-            //            .Reverse();
-
-            #endregion
+          
             #endregion
 
             #region [LINQ – Transformation Operators]
@@ -166,19 +134,8 @@ namespace LINQ
 
 
             #endregion
+           
             #region Q3
-            //var Seq = ListGenerator.ProductsList.Select(P => new {P.ProductID ,P.ProductName,Price = P.UnitPrice });
-
-            #endregion
-            #region Q4
-            //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
-            //var Res = Arr.Select((idx, P) => P == idx);
-            //foreach (var item in Res)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            #endregion
-            #region Q5
             //int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
             //int[] numbersB = { 1, 3, 5, 7, 8 };
             //var Pairs = from A in numbersA
@@ -190,7 +147,7 @@ namespace LINQ
             //    Console.WriteLine($"({pair.A} is less than {pair.B})");
             //}
             #endregion
-            #region Q6
+            #region Q4
             //var TotalOrder = ListGenerator.CustomersList.SelectMany(X => X.Orders).Where(o => o.Total < 500.00m) ;
             #endregion
             #region Q7
